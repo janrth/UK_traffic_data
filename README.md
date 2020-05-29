@@ -6,15 +6,15 @@ It covers 10 years of UK traffic data.
 
 As a binary classification task I wanted to predict if an accident was fatal using given information about roads, weather, time of the day,
 district etc. I used the following algorithms as base models:
-* `Logistic Regression`
-            
+- `Logistic Regression`
+- `Random Forest Classification`
+- `XG Boost`
+
 Using hyperopt (http://hyperopt.github.io/hyperopt/), a bayesian hyper-parameter optimizer, I tunned all models and picked the winner
-based on the ROC AUC score. 
+based on the ROC AUC score. I was also looking for the best cut-off value by using the geometric mean (most left point on the ROC AUC curve). 
 
 Spoiler: The XG Boost model is the (current) winner with a ROC AUC score of .78.
 
 Additionally I tried to identify the main drivers behind the observed fatality. Using the winning model, it seems that speed (restriction) 
 is the main factor for traffic fatality. 
 
-1. **delivery.yaml** - Definition of our CDP Pipeline which consists of 2 steps
-     - `upload-artifacts-to-s3`: Building and uploading our `feature engineering script` and `metadata generator lambda` to S3 as lambda artifacts
