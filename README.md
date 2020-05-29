@@ -11,7 +11,7 @@ district etc. I used the following algorithms as base models:
 - `XG Boost`
 
 Using hyperopt (http://hyperopt.github.io/hyperopt/), a bayesian hyper-parameter optimizer, I tunned all models and picked the winner
-based on the ROC AUC score. I was also looking for the best cut-off value by using the geometric mean (most left point on the ROC AUC curve). 
+based on the ROC AUC score. I was also looking for the best cut-off value by using the geometric mean (optimal point on the ROC AUC curve). 
 
 Spoiler: The XG Boost model is the (current) winner with a ROC AUC score of .78.
 
