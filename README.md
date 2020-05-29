@@ -6,7 +6,7 @@ It covers 10 years of UK traffic data.
 
 As a binary classification task I wanted to predict if an accident was fatal using given information about roads, weather, time of the day,
 district etc. I used the following algorithms as base models:
-- `Logistic Regression`
+* `Logistic Regression`
             
 Using hyperopt (http://hyperopt.github.io/hyperopt/), a bayesian hyper-parameter optimizer, I tunned all models and picked the winner
 based on the ROC AUC score. 
