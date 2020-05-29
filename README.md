@@ -18,7 +18,5 @@ Spoiler: The XG Boost model is the (current) winner with a ROC AUC score of .78.
 Additionally I tried to identify the main drivers behind the observed fatality. Using the winning model, it seems that speed (restriction) 
 is the main factor for traffic fatality. 
 
-Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
+1. **delivery.yaml** - Definition of our CDP Pipeline which consists of 2 steps
+     - `upload-artifacts-to-s3`: Building and uploading our `feature engineering script` and `metadata generator lambda` to S3 as lambda artifacts
